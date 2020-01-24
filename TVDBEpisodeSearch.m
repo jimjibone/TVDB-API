@@ -30,7 +30,7 @@
 - (void)findEpisodeInfoForSeriesID:(NSString*)seriesID Season:(NSInteger)seasonNo Episode:(NSInteger)episodeNo {
 	// Set up the url to get the episode info.
 	NSURL *infoURL = [[NSURL alloc] initWithString:
-						[NSString stringWithFormat:@"http://www.thetvdb.com/api/7F6CCD965D3EF4EC/series/%@/default/%ld/%ld/en.xml", seriesID, seasonNo, episodeNo]];
+						[NSString stringWithFormat:@"http://www.thetvdb.com/api/<your-api-key>/series/%@/default/%ld/%ld/en.xml", seriesID, seasonNo, episodeNo]];
 	
 	// Create a XML parser to search through the returned results for us.
 	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:infoURL];
